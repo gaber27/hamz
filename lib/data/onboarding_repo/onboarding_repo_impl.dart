@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hamztask/core/functions/navigtor.dart';
-import 'package:hamztask/presentation/next_page.dart';
+import 'package:hamztask/presentation/nyt/pages/nyt_view.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:speech_to_text/speech_to_text.dart';
 
@@ -22,9 +22,8 @@ class OnboardingRepository {
           speech.listen(onResult: (result) {
             String recognizedWord = result.recognizedWords.toLowerCase();
             lastRecognizedWord = recognizedWord; // Store the last recognized word
-            print('You said: $recognizedWord');
             if (recognizedWord == 'hello') {
-              navigateAndEnd(context: context!, nextPage: const NextPage());
+              navigateAndEnd(context: context!, nextPage: const NytView());
             } else {
               ScaffoldMessenger.of(context!).showSnackBar(const SnackBar(content: Text('Please Say Hello')));
             }

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 
-void navigate({required BuildContext context, required Widget nextPage}) {
+void navigate({required BuildContext context, required Widget Function(BuildContext) nextPageBuilder}) {
   Navigator.push(
     context,
     PageRouteBuilder(
-      pageBuilder: (context, animation, secondaryAnimation) => nextPage,
+      pageBuilder: (context, animation, secondaryAnimation) => nextPageBuilder(context),
     ),
   );
 }

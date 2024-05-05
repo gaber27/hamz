@@ -9,7 +9,7 @@ ThemeData appTheme = ThemeData(
   textTheme: TextTheme(
       bodyLarge: TextStyle(color: headingColor,fontSize: 18.sp,fontWeight: FontWeight.w900),
       bodyMedium: TextStyle(color: headingColor,fontSize: 14.sp,fontWeight: FontWeight.w500),
-      bodySmall: TextStyle(color: textColor,fontSize: 10.sp,fontWeight: FontWeight.w300),
+      bodySmall: TextStyle(color: headingColor,fontSize: 10.sp,fontWeight: FontWeight.w400),
   ),
   useMaterial3: true,
 );

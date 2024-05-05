@@ -43,6 +43,10 @@ dependencies:
   hexcolor: ^3.0.1
   flutter_bloc: ^8.1.5
   flutter_animate: ^4.5.0
+  dio: ^5.4.3+1
+  shimmer: ^3.0.0
+  shared_preferences: ^2.2.3
+  connectivity_plus : ^6.0.3
 
 dev_dependencies:
   flutter_test:
