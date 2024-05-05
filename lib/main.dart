@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hamztask/bloc/nyt/nyt_bloc.dart';
 import 'package:hamztask/bloc/onboarding/onboarding_bloc.dart';
@@ -14,6 +15,10 @@ import 'bloc/connectivity/connectivity_bloc.dart';
 import 'core/network/local.dart'; // Import SpeechToText
 
 void main() async{
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
   WidgetsFlutterBinding.ensureInitialized();
   await DioHelper.init();
   await CachHelper.init();

@@ -38,7 +38,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> with SingleTick
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Lottie.asset(Images.splashAnimation),
+        Lottie.asset(Images.splashAnimation,height:Sizes.coverHeight),
         VerticalSpace(Sizes.btwWidget,),
         // GestureDetector to start speech recognition
         GestureDetector(
